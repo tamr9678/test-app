@@ -40,8 +40,11 @@ jobs:
 
       - run:
           name: install dependencies
+          dependencies:
+            pre:
+              - gem uninstall bundler
+              - gem install bundler:2.1.0
           command: |
-          gem install bundler:2.1.0
           bundle _2.1.0_ install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
