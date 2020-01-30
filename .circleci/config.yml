@@ -44,7 +44,7 @@ jobs:
             pre:
               - gem uninstall bundler
               - gem install bundler:2.1.0
-          command: |
+          command: 
           bundle _2.1.0_ install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
